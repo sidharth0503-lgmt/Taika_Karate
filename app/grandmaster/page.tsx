@@ -142,7 +142,7 @@ const GrandMasterPage = () => {
         </div>
         <div className="w-full">
           <Image
-            src="/images/karate1.jpg"
+            src="/images/gimage1.jpg"
             alt="Grand Master Legacy"
             width={600}
             height={250}
