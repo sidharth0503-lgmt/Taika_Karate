@@ -121,7 +121,7 @@ function GalleryCard({ cls, index }: any) {
       variants={cardVariants}
       initial="initial"
       whileInView="animate"
-      whileHover="hover"
+      // whileHover="hover"
       viewport={{ once: true }}
       transition={{ delay: index * 0.05 }}
       className="relative overflow-hidden rounded-xl shadow-lg group h-48 w-full bg-gray-700"

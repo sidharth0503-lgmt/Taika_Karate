@@ -72,7 +72,7 @@ export const instructors: Instructor[] = [
 export const classes: ClassImage[] = [
   { id: 'k1', category: 'Karate', image: '/images/gimage1.jpg' },
   { id: 'k2', category: 'Karate', image: '/images/gimage2.jpg' },
-  { id: 'k3', category: 'Karate', image: '/images/gimage3.jpg' },
+  { id: 'k3', category: 'Karate', image: '/images/gimage3.JPG' },
   { id: 'k4', category: 'Karate', image: '/images/gimage4.jpg' },
   { id: 'k5', category: 'Karate', image: '/images/gimage5.jpg' },
   { id: 'k6', category: 'Karate', image: '/images/gimage6.jpg' },
@@ -82,14 +82,14 @@ export const classes: ClassImage[] = [
   { id: 'k10', category: 'Karate', image: '/images/gimage17.jpg' },
    { id: 'k11', category: 'Karate', image: '/images/gimage19.jpg' },
   { id: 'k12', category: 'Karate', image: '/images/gimage20.jpg' },
-  { id: 'k13', category: 'Karate', image: '/images/gimage23.JPG' },
+  { id: 'k13', category: 'Karate', image: '/images/gimage23.jpg' },
 
 
   { id: 'm1', category: 'MartialArts', image: '/images/gimage25.jpg' },
   { id: 'm2', category: 'MartialArts', image: '/images/gimage26.jpg' },
   { id: 'm3', category: 'MartialArts', image: '/images/gimage27.jpg' },
   { id: 'm4', category: 'MartialArts', image: '/images/gimage28.jpg' },
-  { id: 'm5', category: 'MartialArts', image: '/images/gimage30.JPG' },
+  { id: 'm5', category: 'MartialArts', image: '/images/gimage30.jpg' },
   { id: 'm6', category: 'MartialArts', image: '/images/gimage32.jpg' },
   { id: 'm7', category: 'MartialArts', image: '/images/karate11.jpg' },
   { id: 'm8', category: 'MartialArts', image: '/images/karate12.jpg' },
