@@ -361,7 +361,7 @@ export default function Home() {
             {SERVICES.map((item, index) => (
               <div
                 key={index}
-                className="cursor-pointer flex flex-col gap-3 group"
+                className="cursor-pointer flex flex-col gap-1 group"
               >
                 <div className="relative w-full aspect-[3/2]">
                   <Image
@@ -371,7 +371,7 @@ export default function Home() {
                     className="object-cover rounded-lg transform transition-all duration-500"
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-primary">
+                <h3 className="text-xl font-bold gradient-text">
                   {item.title}
                 </h3>
                 <p className="text-sm text-gray-300">{item.content}</p>

@@ -1,36 +1,112 @@
+// "use client";
+
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Pagination, Autoplay } from "swiper/modules";
+
+// import "swiper/css";
+// import "swiper/css/pagination";
+
+// const heroSlides = [
+//    {
+//     image: "/images/gimage4.jpg",  
+//   },
+//   {
+//     image: "/images/gimage3.jpg",  
+//   },
+//  {
+//     image: "/images/gimage5.jpg",  
+//   },
+//    {
+//     image: "/images/gimage1.jpg",  
+//   },
+//    {
+//     image: "/images/gimage2.jpg",  
+//   },
+//   {
+//     image: "/images/gimage6.jpg",  
+//   },
+//   {
+//     image: "/images/gimage7.jpg",  
+//   },
+// ];
+
+// export function Hero() {
+//   return (
+//     <section className="relative bg-black">
+//       <Swiper
+//         modules={[Pagination, Autoplay]}
+//         pagination={{ clickable: true }}
+//         autoplay={{ delay: 3500, disableOnInteraction: false }}
+//         loop
+//         speed={900}
+//         className="w-full h-[300px] md:h-[450px] lg:h-[600px] xl:h-[800px] 2xl:h-screen"
+//       >
+//         {heroSlides.map((slide, index) => (
+//           <SwiperSlide key={index}>
+//             <div
+//               className="relative w-full h-[300px] md:h-[450px] lg:h-[600px] xl:h-[800px] 2xl:h-screen bg-cover bg-center"
+//               style={{ backgroundImage: `url(${slide.image})` }}
+//             >
+//               <div className="absolute inset-0" />
+//                {/* bg-black/50 */}
+//             </div>
+//           </SwiperSlide>
+//         ))}
+//       </Swiper>
+
+//       <style>{`
+//         .swiper-pagination {
+//           bottom: 10px !important;
+//         }
+//         .swiper-pagination-bullet {
+//           background-color: #ccc;
+//           opacity: 0.6;
+//           transition: all 0.3s ease;
+//         }
+//         .swiper-pagination-bullet-active {
+//           background-color: #ef4444; 
+//           opacity: 1;
+//         }
+//       `}</style>
+//     </section>
+//   );
+// }
+
+
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
+import Image from "next/image";
+import { useState } from "react";
 
 import "swiper/css";
 import "swiper/css/pagination";
 
 const heroSlides = [
-   {
-    image: "/images/gimage4.jpg",  
-  },
-  {
-    image: "/images/gimage3.jpg",  
-  },
- {
-    image: "/images/gimage5.jpg",  
-  },
-   {
-    image: "/images/gimage1.jpg",  
-  },
-   {
-    image: "/images/gimage2.jpg",  
-  },
-  {
-    image: "/images/gimage6.jpg",  
-  },
-  {
-    image: "/images/gimage7.jpg",  
-  },
+  { image: "/images/gimage4.jpg" },
+  { image: "/images/gimage3.jpg" },
+  { image: "/images/gimage5.jpg" },
+  { image: "/images/gimage1.jpg" },
+  { image: "/images/gimage2.jpg" },
+  { image: "/images/gimage6.jpg" },
+  { image: "/images/gimage7.jpg" },
 ];
 
 export function Hero() {
+  // Track loading state for each slide
+  const [loadingStates, setLoadingStates] = useState(
+    heroSlides.map(() => true)
+  );
+
+  const handleLoad = (index: number) => {
+    setLoadingStates((prev) => {
+      const newStates = [...prev];
+      newStates[index] = false;
+      return newStates;
+    });
+  };
+
   return (
     <section className="relative bg-black">
       <Swiper
@@ -43,12 +119,20 @@ export function Hero() {
       >
         {heroSlides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div
-              className="relative w-full h-[300px] md:h-[450px] lg:h-[600px] xl:h-[800px] 2xl:h-screen bg-cover bg-center"
-              style={{ backgroundImage: `url(${slide.image})` }}
-            >
+            <div className="relative w-full h-[300px] md:h-[450px] lg:h-[600px] xl:h-[800px] 2xl:h-screen">
+              {loadingStates[index] && (
+                <div className="absolute inset-0 flex items-center justify-center bg-black">
+                  <div className="w-12 h-12 border-4 border-red-600 border-t-transparent rounded-full animate-spin" />
+                </div>
+              )}
+              <Image
+                src={slide.image}
+                alt={`Hero Slide ${index + 1}`}
+                fill
+                className="object-cover"
+                onLoadingComplete={() => handleLoad(index)}
+              />
               <div className="absolute inset-0" />
-               {/* bg-black/50 */}
             </div>
           </SwiperSlide>
         ))}

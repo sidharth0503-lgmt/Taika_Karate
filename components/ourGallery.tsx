@@ -32,7 +32,7 @@ export default function KarateGallery() {
   return (
     <Section>
       {/* Heading */}
-    <motion.div
+      <motion.div
         variants={containerVariants}
         initial="initial"
         whileInView="animate"
@@ -49,13 +49,14 @@ export default function KarateGallery() {
           variants={fadeInUpVariants}
           className="text-md md:text-lg text-muted-dark max-w-2xl mx-auto"
         >
-          A collection of memorable moments and achievements from our karate classes, showcasing dedication, training, and progress.
+          A collection of memorable moments and achievements from our karate
+          classes, showcasing dedication, training, and progress.
         </motion.p>
       </motion.div>
 
       {/* Masonry Grid */}
       <div className="w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-2 auto-rows-[150px] sm:auto-rows-[150px] md:auto-rows-[180px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-2 md:gap-2 auto-rows-[150px] sm:auto-rows-[150px] md:auto-rows-[180px]">
           {GALLERY_IMAGES.map(({ src, cols, rows }, idx) => (
             <GalleryImage key={idx} src={src} cols={cols} rows={rows} />
           ))}
@@ -65,7 +66,6 @@ export default function KarateGallery() {
   );
 }
 
-// Individual image with loader
 function GalleryImage({ src, cols = 1, rows = 1 }: any) {
   const [loaded, setLoaded] = useState(false);
 
@@ -77,7 +77,6 @@ function GalleryImage({ src, cols = 1, rows = 1 }: any) {
         gridRow: `span ${rows > 1 ? rows : 1}`,
       }}
     >
-      {/* Loader Overlay */}
       {!loaded && (
         <div className="absolute inset-0 flex flex-col items-center justify-center z-10 bg-gray-700">
           <AiOutlineLoading3Quarters className="text-white animate-spin text-3xl mb-2" />
@@ -91,7 +90,9 @@ function GalleryImage({ src, cols = 1, rows = 1 }: any) {
         fill
         style={{ objectFit: "cover" }}
         onLoadingComplete={() => setLoaded(true)}
-        className={`transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
+        className={`transition-opacity duration-500 ${
+          loaded ? "opacity-100" : "opacity-0"
+        }`}
       />
     </motion.div>
   );
