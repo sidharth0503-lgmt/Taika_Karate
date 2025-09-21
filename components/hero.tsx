@@ -7,26 +7,26 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 const heroSlides = [
-  {
-    image: "/images/gimage4.jpg",
+   {
+    image: "/images/gimage4.jpg",  
   },
   {
-    image: "/images/gimage14.jpg",
+    image: "/images/gimage3.jpg",  
+  },
+ {
+    image: "/images/gimage5.jpg",  
+  },
+   {
+    image: "/images/gimage1.jpg",  
+  },
+   {
+    image: "/images/gimage2.jpg",  
   },
   {
-    image: "/images/gimage5.jpg",
+    image: "/images/gimage6.jpg",  
   },
   {
-    image: "/images/gimage1.jpg",
-  },
-  {
-    image: "/images/gimage2.jpg",
-  },
-  {
-    image: "/images/gimage6.jpg",
-  },
-  {
-    image: "/images/gimage7.jpg",
+    image: "/images/gimage7.jpg",  
   },
 ];
 
@@ -48,7 +48,7 @@ export function Hero() {
               style={{ backgroundImage: `url(${slide.image})` }}
             >
               <div className="absolute inset-0" />
-              {/* bg-black/50 */}
+               {/* bg-black/50 */}
             </div>
           </SwiperSlide>
         ))}
