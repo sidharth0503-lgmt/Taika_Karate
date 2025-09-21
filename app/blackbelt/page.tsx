@@ -62,8 +62,8 @@ const BlackBeltPage = () => {
           className="rounded-2xl shadow-lg border-2 border-primary"
         />
         <div>
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6 gradient-text">
-            Symbol of Mastery & Growth
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6">
+            Symbol of <span className="text-primary">Mastery & Growth</span>
           </h2>
           <p className="text-gray-300 mb-6 text-lg leading-relaxed">
             The black belt is not just an achievement—it is a lifelong
@@ -74,25 +74,25 @@ const BlackBeltPage = () => {
 
           <ul className="list-disc list-inside space-y-3 text-gray-300 text-lg">
             <li>
-              <span className="text-primary font-semibold">Discipline:</span>{" "}
+              <span className="gradient-text font-semibold">Discipline:</span>{" "}
               Years of training teach patience, consistency, and resilience.
             </li>
             <li>
-              <span className="text-primary font-semibold">Respect:</span> Black
+              <span className="gradient-text font-semibold">Respect:</span> Black
               belts embody respect for teachers, peers, and the art itself.
             </li>
             <li>
-              <span className="text-primary font-semibold">Leadership:</span> A
+              <span className="gradient-text font-semibold">Leadership:</span> A
               black belt is a role model, guiding juniors and uplifting the dojo
               spirit.
             </li>
             <li>
-              <span className="text-primary font-semibold">Humility:</span>{" "}
+              <span className="gradient-text font-semibold">Humility:</span>{" "}
               Mastery is not arrogance but understanding that learning never
               ends.
             </li>
             <li>
-              <span className="text-primary font-semibold">Balance:</span> It
+              <span className="gradient-text font-semibold">Balance:</span> It
               teaches harmony between physical skill, mental focus, and inner
               peace.
             </li>
@@ -105,7 +105,7 @@ const BlackBeltPage = () => {
         transition={{ duration: 0.8 }}
         className="max-w-3xl mx-auto"
       >
-        <h2 className="text-3xl md:text-4xl font-semibold mb-10 text-center gradient-text">
+        <h2 className="text-3xl md:text-4xl font-semibold mb-4 md:mb-6 text-center gradient-text">
           Black Belt Questions
         </h2>
         <Accordion type="single" collapsible className="w-full space-y-4">

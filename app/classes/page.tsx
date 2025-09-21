@@ -15,10 +15,10 @@ import {
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import Image from "next/image";
 
-const filters = ["All", "Karate", "MartialArts", "KickBoxing"];
+const filters = ["KickBoxing", "Karate", "MartialArts", "All"];
 
 export default function Classes() {
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeFilter, setActiveFilter] = useState("Karate");
 
   const filteredClasses = classes.filter(
     (cls) => activeFilter === "All" || cls.category === activeFilter
@@ -26,37 +26,37 @@ export default function Classes() {
 
   return (
     <motion.div
-      variants={pageVariants}
-      initial="initial"
-      animate="animate"
-      exit="exit"
+      // variants={pageVariants}
+      // initial="initial"
+      // animate="animate"
+      // exit="exit"
     >
       {/* Hero Section */}
       <Section>
         <motion.div
-          variants={containerVariants}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: false }}
+          // variants={containerVariants}
+          // initial="initial"
+          // whileInView="animate"
+          // viewport={{ once: true }}
           className="text-center"
         >
           <motion.h2
-            variants={fadeInUpVariants}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: false }}
+            // variants={fadeInUpVariants}
+            // initial={{ opacity: 0, y: 20 }}
+            // whileInView={{ opacity: 1, y: 0 }}
+            // transition={{ duration: 0.6 }}
+            // viewport={{ once: true }}
             className="text-section font-heading font-bold text-white mb-4"
           >
             Our <span className="gradient-text">Classes</span>
           </motion.h2>
 
           <motion.p
-            variants={fadeInUpVariants}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: false }}
+            // variants={fadeInUpVariants}
+            // initial={{ opacity: 0, y: 20 }}
+            // whileInView={{ opacity: 1, y: 0 }}
+            // transition={{ duration: 0.6, delay: 0.1 }}
+            // viewport={{ once: false }}
             className="text-md md:text-lg text-muted-dark max-w-2xl mx-auto mb-4"
           >
             Browse through our gallery of Kids Karate, Martial Arts, and
@@ -64,10 +64,10 @@ export default function Classes() {
           </motion.p>
 
           <motion.div
-            variants={fadeInUpVariants}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: false }}
+            // variants={fadeInUpVariants}
+            // initial="initial"
+            // whileInView="animate"
+            // viewport={{ once: false }}
             className="flex flex-wrap justify-center gap-3"
           >
             {filters.map((filter) => (
