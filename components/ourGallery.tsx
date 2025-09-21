@@ -80,7 +80,7 @@ function GalleryImage({ src, cols = 1, rows = 1 }: any) {
       {!loaded && (
         <div className="absolute inset-0 flex flex-col items-center justify-center z-10 bg-gray-700">
           <AiOutlineLoading3Quarters className="text-white animate-spin text-3xl mb-2" />
-          <span className="text-gray-300 text-sm">Loading...</span>
+          {/* <span className="text-gray-300 text-sm">Loading...</span> */}
         </div>
       )}
 
