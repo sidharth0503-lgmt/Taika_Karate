@@ -11,7 +11,7 @@ const heroSlides = [
     image: "/images/gimage4.jpg",  
   },
   {
-    image: "/images/gimage3.jpg",  
+    image: "/images/gimage3.JPG",  
   },
  {
     image: "/images/gimage5.jpg",  

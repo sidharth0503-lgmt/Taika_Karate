@@ -82,14 +82,14 @@ export const classes: ClassImage[] = [
   { id: 'k10', category: 'Karate', image: '/images/gimage17.jpg' },
    { id: 'k11', category: 'Karate', image: '/images/gimage19.jpg' },
   { id: 'k12', category: 'Karate', image: '/images/gimage20.jpg' },
-  { id: 'k13', category: 'Karate', image: '/images/gimage23.jpg' },
+  { id: 'k13', category: 'Karate', image: '/images/gimage23.JPG' },
 
 
   { id: 'm1', category: 'MartialArts', image: '/images/gimage25.jpg' },
   { id: 'm2', category: 'MartialArts', image: '/images/gimage26.jpg' },
   { id: 'm3', category: 'MartialArts', image: '/images/gimage27.jpg' },
   { id: 'm4', category: 'MartialArts', image: '/images/gimage28.jpg' },
-  { id: 'm5', category: 'MartialArts', image: '/images/gimage30.jpg' },
+  { id: 'm5', category: 'MartialArts', image: '/images/gimage30.JPG' },
   { id: 'm6', category: 'MartialArts', image: '/images/gimage32.jpg' },
   { id: 'm7', category: 'MartialArts', image: '/images/karate11.jpg' },
   { id: 'm8', category: 'MartialArts', image: '/images/karate12.jpg' },
