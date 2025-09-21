@@ -1,6 +1,9 @@
 "use client";
 
+import { useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 const ACHIEVEMENTS = [
   { id: 1, src: "/images/karate18.jpg", title: "International Open 2025" },
@@ -33,29 +36,24 @@ const ACHIEVEMENTS = [
   { id: 28, src: "/images/gimage33.jpg", title: "Karate Youth Summit" },
 ];
 
-
 const fadeInUpVariants = {
   initial: { opacity: 0, y: 10 },
   animate: { opacity: 1, y: 0, transition: { duration: 0.3 } },
 };
 
 const containerVariants = {
-  animate: {
-    transition: { staggerChildren: 0.15 },
-  },
+  animate: { transition: { staggerChildren: 0.15 } },
 };
 
 export default function AchievementsSection() {
   return (
-    <section className="bg-gradient-to-br from-black via-gray-900 to-gray-900
-       section-padding container-padding">
-      {/* Heading */}
+    <section className="bg-gradient-to-br from-black via-gray-900 to-gray-900 section-padding container-padding">
       <motion.div
         variants={containerVariants}
         initial="initial"
         whileInView="animate"
         viewport={{ once: false, amount: 0.3 }}
-        className="text-center mb-8 md:mb-16"
+        className="text-center mb-8"
       >
         <motion.h2
           variants={fadeInUpVariants}
@@ -65,13 +63,63 @@ export default function AchievementsSection() {
         </motion.h2>
         <motion.p
           variants={fadeInUpVariants}
-          className="text-md md:text-lg text-muted-dark max-w-2xl mx-auto"
+          className="text-md md:text-lg text-muted-dark max-w-2xl mx-auto mb-4"
         >
-          Celebrating the success and milestones of our karate students and team
+          Celebrating the milestones and exceptional accomplishments of our Founder,{" "}
+          <span className="font-semibold text-primary">Grandmaster Shihan Dr. Ashok Chakravarti</span>, 
+          and the Kaarti Academy team.
         </motion.p>
       </motion.div>
 
-      {/* Grid Gallery */}
+
+       <motion.div
+  variants={fadeInUpVariants}
+  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto text-left mb-6"
+>
+  <div className="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition-transform duration-300 hover:scale-105">
+    <span className="font-semibold text-white">Pioneer in Martial Arts:</span>
+    <span className="text-gray-400"> Credited with revolutionizing Karate and elevating its standards for future generations.</span>
+  </div>
+
+  <div className="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition-transform duration-300 hover:scale-105">
+    <span className="font-semibold text-white">Blackbelt 5th Dan:</span>
+    <span className="text-gray-400"> Demonstrating exceptional expertise in Karate.</span>
+  </div>
+
+  <div className="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition-transform duration-300 hover:scale-105">
+    <span className="font-semibold text-white">2nd World Martial Arts Championship Gold Medalist:</span>
+    <span className="text-gray-400"> Achieved in 2015, showcasing his competitive excellence.</span>
+  </div>
+
+  <div className="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition-transform duration-300 hover:scale-105">
+    <span className="font-semibold text-white">National Referee in Karate:</span>
+    <span className="text-gray-400"> Reflecting his high standing in the sport.</span>
+  </div>
+
+  <div className="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition-transform duration-300 hover:scale-105">
+    <span className="font-semibold text-white">Vice President of USKI:</span>
+    <span className="text-gray-400"> Serving in Telangana, contributing to the growth of Karate.</span>
+  </div>
+
+  <div className="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition-transform duration-300 hover:scale-105">
+    <span className="font-semibold text-white">WKF Certified Coach:</span>
+    <span className="text-gray-400"> Official recognition of his dedication and expertise.</span>
+  </div>
+
+  <div className="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition-transform duration-300 hover:scale-105">
+    <span className="font-semibold text-white">Honorary Degree of Doctor of Martial Arts:</span>
+    <span className="text-gray-400"> Received for outstanding contributions to the field.</span>
+  </div>
+
+  <div className="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition-transform duration-300 hover:scale-105">
+    <span className="font-semibold text-white">National Martial Arts Excellence Award:</span>
+    <span className="text-gray-400"> Honored in Telangana in 2023 for his exceptional contributions.</span>
+  </div>
+</motion.div>
+
+      
+
+      {/* Achievements Grid */}
       <motion.div
         variants={containerVariants}
         initial="initial"
@@ -80,23 +128,32 @@ export default function AchievementsSection() {
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2"
       >
         {ACHIEVEMENTS.map((item) => (
-          <motion.div
-            key={item.id}
-            variants={fadeInUpVariants}
-            whileHover={{ scale: 1.05 }}
-            className="relative overflow-hidden rounded-xl shadow-lg border border-white/10 group cursor-pointer"
-          >
-            <img
-              src={item.src}
-              alt={item.title}
-              className="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            {/* <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm text-center py-2 opacity-0 group-hover:opacity-100 transition-opacity">
-              {item.title}
-            </div> */}
-          </motion.div>
+          <GalleryCard key={item.id} src={item.src} title={item.title} />
         ))}
       </motion.div>
     </section>
+  );
+}
+
+// Gallery card with loader
+function GalleryCard({ src, title }:any) {
+  const [loaded, setLoaded] = useState(false);
+
+  return (
+    <div className="relative overflow-hidden rounded-xl shadow-lg border border-white/10 group cursor-pointer h-44 w-full bg-gray-800">
+      {!loaded && (
+        <div className="absolute inset-0 flex items-center justify-center z-10">
+          <AiOutlineLoading3Quarters className="text-white animate-spin text-3xl" />
+        </div>
+      )}
+
+      <Image
+        src={src}
+        alt={title}
+        fill
+        onLoad={() => setLoaded(true)}
+        className={`object-cover transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
+      />
+    </div>
   );
 }

@@ -13,38 +13,41 @@ import { containerVariants, fadeInUpVariants } from "@/lib/motion";
 const BlackBeltPage = () => {
   return (
     <div className="bg-gradient-to-br from-black via-gray-900 to-gray-900 section-padding container-padding">
-      <motion.div
-        variants={containerVariants}
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: false, amount: 0.3 }}
-        className="text-center mb-8 md:mb-16"
-      >
-        <motion.h2
-          variants={fadeInUpVariants}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+
+     <motion.div
+          variants={containerVariants}
+          initial="initial"
+          whileInView="animate"
           viewport={{ once: false }}
-          className="text-4xl md:text-5xl font-heading font-bold text-white mb-4"
+          className="text-center"
         >
-          The Power of the <span className="gradient-text">Black Belt</span>
-        </motion.h2>
-        <motion.p
-          variants={fadeInUpVariants}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={{ once: false }}
-          className="text-lg md:text-xl text-muted-dark max-w-3xl mx-auto"
-        >
-          In karate, the{" "}
+          <motion.h2
+            variants={fadeInUpVariants}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: false }}
+            className="text-section font-heading font-bold text-white mb-4"
+          >
+             The Power of the <span className="gradient-text">Black Belt</span>
+          </motion.h2>
+
+          <motion.p
+            variants={fadeInUpVariants}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: false }}
+            className="text-md md:text-lg text-muted-dark max-w-2xl mx-auto mb-4"
+          >
+            In karate, the{" "}
           <span className="text-primary font-semibold">Black Belt</span> is more
           than a symbol of skill—it is a journey of self-discipline, respect,
           and inner strength. It represents years of dedication, overcoming
           challenges, and a promise to guide others.
-        </motion.p>
-      </motion.div>
+          </motion.p>
+        </motion.div>
+
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -59,7 +62,7 @@ const BlackBeltPage = () => {
           className="rounded-2xl shadow-lg border-2 border-primary"
         />
         <div>
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-primary">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 gradient-text">
             Symbol of Mastery & Growth
           </h2>
           <p className="text-gray-300 mb-6 text-lg leading-relaxed">
@@ -102,7 +105,7 @@ const BlackBeltPage = () => {
         transition={{ duration: 0.8 }}
         className="max-w-3xl mx-auto"
       >
-        <h2 className="text-3xl md:text-4xl font-semibold mb-10 text-center text-primary">
+        <h2 className="text-3xl md:text-4xl font-semibold mb-10 text-center gradient-text">
           Black Belt Questions
         </h2>
         <Accordion type="single" collapsible className="w-full space-y-4">
@@ -160,3 +163,57 @@ const BlackBeltPage = () => {
 };
 
 export default BlackBeltPage;
+
+
+//  <motion.div
+//           variants={containerVariants}
+//           initial="initial"
+//           whileInView="animate"
+//           viewport={{ once: false }}
+//           className="text-center"
+//         >
+//           <motion.h2
+//             variants={fadeInUpVariants}
+//             initial={{ opacity: 0, y: 20 }}
+//             whileInView={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 0.6 }}
+//             viewport={{ once: false }}
+//             className="text-section font-heading font-bold text-white mb-4"
+//           >
+//             Our <span className="gradient-text">Classes</span>
+//           </motion.h2>
+
+//           <motion.p
+//             variants={fadeInUpVariants}
+//             initial={{ opacity: 0, y: 20 }}
+//             whileInView={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 0.6, delay: 0.1 }}
+//             viewport={{ once: false }}
+//             className="text-md md:text-lg text-muted-dark max-w-2xl mx-auto mb-4"
+//           >
+//             Browse through our gallery of Kids Karate, Martial Arts, and
+//             KickBoxing to see the energy and discipline in action.
+//           </motion.p>
+
+//           <motion.div
+//             variants={fadeInUpVariants}
+//             initial="initial"
+//             whileInView="animate"
+//             viewport={{ once: false }}
+//             className="flex flex-wrap justify-center gap-3"
+//           >
+//             {filters.map((filter) => (
+//               <Button
+//                 key={filter}
+//                 variant={activeFilter === filter ? "default" : "outline"}
+//                 size="sm"
+//                 onClick={() => setActiveFilter(filter)}
+//                 animate={false}
+//                 className="min-w-[80px]"
+//               >
+//                 <Filter className="w-4 h-4 mr-2" />
+//                 {filter}
+//               </Button>
+//             ))}
+//           </motion.div>
+//         </motion.div>
