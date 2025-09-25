@@ -20,7 +20,7 @@ const BLACK_BELT_IMAGES = [
 
 export default function BlackBeltGallery() {
   return (
-    <section className="bg-black py-4 md:py-12 px-6 md:px-12 lg:px-20">
+    <section className="bg-black py-4 md:py-12 px-6 section-padding container-padding">
      <motion.div
   variants={containerVariants}
   initial="initial"
