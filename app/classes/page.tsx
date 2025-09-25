@@ -21,7 +21,7 @@ export default function Classes() {
   return (
     <div>
       {/* Hero Section */}
-       <div className="text-center pt-12">
+       <div className="text-center md:pt-12 container-padding">
   <motion.h2
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
