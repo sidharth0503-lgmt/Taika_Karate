@@ -63,7 +63,7 @@ export function Footer() {
               <a href="#" className="text-muted hover:text-primary transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-muted hover:text-primary transition-colors">
+              <a href="https://youtube.com/@taikamartialartsacademy8548?si=VrVUE0W-XK2O82k4" className="text-muted hover:text-primary transition-colors">
                 <Youtube className="w-5 h-5" />
               </a>
             </div>
@@ -210,7 +210,7 @@ export function Footer() {
             transition={{ duration: 0.6, ease: "easeOut" }}
         className="border-t border-white/10 py-4">
           <p className="text-muted text-sm text-center">
-            © {currentYear} <span className="font-semibold text-white">International <span className="text-red-500">Taika</span> Martial Arts Academy</span><br/>All rights reserved
+            © {currentYear} <span className="font-semibold text-white">International <span className="text-red-500">Taika</span> Martial Arts Academy</span><br/>All rights reserved.
           </p>
         </motion.div>
       </div>

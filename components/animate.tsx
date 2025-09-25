@@ -78,7 +78,7 @@ export default function FloatingSocialButtons() {
             initial="hidden"
             animate="visible"
             exit="exit"
-            href="https://www.youtube.com/@taikamartialartsacademy8548"
+            href="https://youtube.com/@taikamartialartsacademy8548?si=VrVUE0W-XK2O82k4"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-red-600 text-white p-2.5 md:p-3 rounded-full shadow-xl 

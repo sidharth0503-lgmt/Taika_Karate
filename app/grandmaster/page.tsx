@@ -1,44 +1,82 @@
-'use client';
+"use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { containerVariants, fadeInUpVariants } from "@/lib/motion";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+
+
+
+const GalleryImage = ({ src, alt }: { src: string; alt: string }) => {
+  const [loaded, setLoaded] = useState(false);
+
+  return (
+    <div className="relative w-full h-[220px] overflow-hidden rounded-xl shadow-lg border-2 border-primary bg-gray-900">
+      {!loaded && (
+        <div className="absolute inset-0 flex items-center justify-center z-10">
+          <AiOutlineLoading3Quarters className="text-white animate-spin text-2xl" />
+        </div>
+      )}
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className={`object-cover transition-opacity duration-500 ${
+          loaded ? "opacity-100" : "opacity-0"
+        }`}
+        onLoad={() => setLoaded(true)}
+      />
+    </div>
+  );
+};
+
 
 const GrandMasterPage = () => {
+   const galleryImages = [
+    "/images/gimage15.jpg",
+    "/images/gimage2.jpg",
+    "/images/gimage3.jpg",
+    "/images/gimage4.jpg",
+    "/images/gimage5.jpg",
+    "/images/gimage6.jpg",
+    "/images/gimage7.jpg",
+    "/images/gimage8.jpg",
+  ];
+
   return (
     <div className="bg-gradient-to-br from-black via-gray-900 to-gray-900 section-padding container-padding">
-
-       <motion.div
-          variants={containerVariants}
-          initial="initial"
-          whileInView="animate"
+      <motion.div
+        variants={containerVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: false }}
+        className="text-center"
+      >
+        <motion.h2
+          variants={fadeInUpVariants}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: false }}
-          className="text-center"
+          className="text-section font-heading font-bold text-white mb-4"
         >
-          <motion.h2
-            variants={fadeInUpVariants}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: false }}
-            className="text-section font-heading font-bold text-white mb-4"
-          >
-             The Wisdom of <span className="gradient-text">Grand Master</span>
-          </motion.h2>
+          The Wisdom of <span className="gradient-text">Grand Master</span>
+        </motion.h2>
 
-          <motion.p
-            variants={fadeInUpVariants}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: false }}
-            className="text-md md:text-lg text-muted-dark max-w-2xl mx-auto mb-4"
-          >
-             A Grand Master embodies mastery, discipline, and the spirit of karate.
-          Beyond techniques, they inspire philosophy, respect, and a lifelong pursuit of excellence.
-          </motion.p>
-        </motion.div>
+        <motion.p
+          variants={fadeInUpVariants}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: false }}
+          className="text-md md:text-lg text-muted-dark max-w-2xl mx-auto mb-4"
+        >
+          A Grand Master embodies mastery, discipline, and the spirit of karate.
+          Beyond techniques, they inspire philosophy, respect, and a lifelong
+          pursuit of excellence.
+        </motion.p>
+      </motion.div>
 
       {/* Image + Introduction */}
       <motion.div
@@ -57,25 +95,30 @@ const GrandMasterPage = () => {
           />
         </div>
         <div className="text-center md:text-left">
-          <h2 className="text-2xl sm:text-3xl font-semibold mb-4 gradient-text">
+          <h2 className="text-[30px] gradient-text mb-4">
             Beyond Rank, A Lasting Legacy
           </h2>
           <p className="text-gray-300 mb-4 text-base sm:text-lg leading-relaxed">
-            The measure of a Grand Master lies not in belts, but in the generations they shape.
-            Their teachings extend far beyond the dojo, influencing lives through guidance, discipline, and integrity.
+            The measure of a Grand Master lies not in belts, but in the
+            generations they shape. Their teachings extend far beyond the dojo,
+            influencing lives through guidance, discipline, and integrity.
           </p>
           <ul className="list-disc list-inside space-y-2 text-gray-300 text-sm sm:text-base">
             <li>
-              <span className="text-primary font-semibold">Mentorship:</span> Guiding students with patience, wisdom, and inspiration.
+              <span className="text-primary font-semibold">Mentorship:</span>{" "}
+              Guiding students with patience, wisdom, and inspiration.
             </li>
             <li>
-              <span className="text-primary font-semibold">Tradition:</span> Preserving karate’s culture, values, and spirit.
+              <span className="text-primary font-semibold">Tradition:</span>{" "}
+              Preserving karate’s culture, values, and spirit.
             </li>
             <li>
-              <span className="text-primary font-semibold">Balance:</span> Teaching harmony of body, mind, and heart.
+              <span className="text-primary font-semibold">Balance:</span>{" "}
+              Teaching harmony of body, mind, and heart.
             </li>
             <li>
-              <span className="text-primary font-semibold">Legacy:</span> Inspiring generations through discipline, respect, and honor.
+              <span className="text-primary font-semibold">Legacy:</span>{" "}
+              Inspiring generations through discipline, respect, and honor.
             </li>
           </ul>
         </div>
@@ -92,15 +135,21 @@ const GrandMasterPage = () => {
           Grandmaster Shihan Dr. Ashok Chakravarti
         </h2>
         <p className="text-gray-300 max-w-4xl mx-auto text-base sm:text-lg md:text-xl leading-relaxed mb-4">
-          With over 25 years of martial arts expertise, Grandmaster Shihan Dr. Ashok Chakravarti is the founder of the International Taika Academy,
-          a leading karate institution in South India.
+          With over 25 years of martial arts expertise, Grandmaster Shihan Dr.
+          Ashok Chakravarti is the founder of the International Taika Academy, a
+          leading karate institution in South India.
         </p>
         <p className="text-gray-300 max-w-4xl mx-auto text-base sm:text-lg md:text-xl leading-relaxed mb-4">
-          <span className="text-primary font-semibold">Achievements:</span> Blackbelt 5th Dan, 2nd World Martial Arts Championship Gold Medalist (2015),
-          National Karate Referee, Vice President of USKI (Telangana), WKF Certified Coach, and recipient of the National Martial Arts Excellence Award (2023).
+          <span className="text-primary font-semibold">Achievements:</span>{" "}
+          Blackbelt 5th Dan, 2nd World Martial Arts Championship Gold Medalist
+          (2015), National Karate Referee, Vice President of USKI (Telangana),
+          WKF Certified Coach, and recipient of the National Martial Arts
+          Excellence Award (2023).
         </p>
         <p className="text-gray-300 max-w-4xl mx-auto text-base sm:text-lg md:text-xl leading-relaxed">
-          Under his guidance, International Taika Academy has expanded to 10 branches across Hyderabad, promoting fitness, discipline, and martial arts philosophy to all.
+          Under his guidance, International Taika Academy has expanded to 10
+          branches across Hyderabad, promoting fitness, discipline, and martial
+          arts philosophy to all.
         </p>
       </motion.div>
 
@@ -111,12 +160,13 @@ const GrandMasterPage = () => {
         transition={{ duration: 0.8 }}
         className="text-center mb-8 md:mb-14 px-2"
       >
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text mb-6">
+        <h2 className="text-[30px] gradient-text mb-4">
           Philosophy
         </h2>
         <p className="text-gray-300 max-w-4xl mx-auto text-base sm:text-lg md:text-xl leading-relaxed">
-          Karate is more than combat; it is a path of humility, self-control, and respect.
-          Grand Masters embody decades of training, blending strength with compassion and wisdom.
+          Karate is more than combat; it is a path of humility, self-control,
+          and respect. Grand Masters embody decades of training, blending
+          strength with compassion and wisdom.
         </p>
       </motion.div>
 
@@ -128,16 +178,17 @@ const GrandMasterPage = () => {
         className="grid md:grid-cols-2 gap-10 items-center"
       >
         <div className="text-center md:text-left">
-          <h2 className="text-2xl sm:text-3xl font-semibold mb-4 gradient-text">
+          <h2 className="text-[30px]  gradient-text mb-4">
             The Legacy They Leave
           </h2>
           <p className="text-gray-300 mb-4 text-base sm:text-lg leading-relaxed">
-            True influence of a Grand Master is measured by the lives they touch,
-            the students they inspire, and the respect they earn through wisdom and humility.
+            True influence of a Grand Master is measured by the lives they
+            touch, the students they inspire, and the respect they earn through
+            wisdom and humility.
           </p>
           <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-            Every lesson they impart becomes a seed for the future, nurturing strength,
-            character, and discipline in the next generation.
+            Every lesson they impart becomes a seed for the future, nurturing
+            strength, character, and discipline in the next generation.
           </p>
         </div>
         <div className="w-full">
@@ -150,6 +201,21 @@ const GrandMasterPage = () => {
           />
         </div>
       </motion.div>
+
+       <div className="mt-14">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4 gradient-text text-center">
+          Moments with the Grand Master
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+          {galleryImages.map((src, idx) => (
+            <GalleryImage
+              key={idx}
+              src={src}
+              alt={`Grand Master ${idx + 1}`}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

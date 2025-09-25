@@ -14,7 +14,7 @@ const navigation = [
     { name: "Branches", href: "/branches" },
      { name: "BlackBelt", href: "/blackbelt" },
       { name: "GrandMaster", href: "/grandmaster" },
-  // { name: "Contact", href: "/contact" },
+  { name: "BlackBelt Gallery", href: "/blackbelt-gallery" },
 ];
 
 export function Navbar() {
@@ -82,7 +82,7 @@ export function Navbar() {
             </Link>
 
             {/* Desktop Nav */}
-            <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+            <div className="hidden lg:flex items-center md:space-x-6">
               {navigation.map((item, i) => (
                 <motion.div
                   key={item.name}
