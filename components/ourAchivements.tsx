@@ -116,7 +116,7 @@ export default function AchievementsSection() {
         </div>
         <div className="bg-gray-900 rounded-2xl overflow-hidden border-2 border-primary">
           <img
-            src="/images/Karate17.jpg"
+            src="/images/karate17.jpg"
             alt="2nd World Martial Arts Championship Gold Medalist"
             className="w-full h-40 object-cover"
           />
