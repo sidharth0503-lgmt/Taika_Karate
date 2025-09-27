@@ -65,6 +65,23 @@ export default function OurBranches() {
       name: "International Taika martial arts academy",
       address: "V.V Nagar, Kukatpally, Hyderabad, Telangana",
     },
+     {
+      img: "https://acchevibes.com/wp-content/uploads/2023/04/2022-04-16.jpg",
+      name: "International Taika martial arts academy",
+      address: "4th Floor, Harmony Towers, adjacent to Ratnadeep, Pragathi Nagar, Kukatpally, Hyderabad, Telangana 500090",
+    },
+     {
+      img: "https://acchevibes.com/wp-content/uploads/2023/04/2022-04-16.jpg",
+      name: "International Taika martial arts academy",
+      address: "Beerumguda, Krishna Reddy Pet Rd, beside Bachpan school, Hyderabad, Telangana 502032",
+    },
+     {
+      img: "https://acchevibes.com/wp-content/uploads/2023/04/2022-04-16.jpg",
+      name: "International Taika martial arts academy",
+      address: "Dharma’s House, Plot No 145, Road No 11, near Ganesh Mandapam, 4th Phase, SLN, Patelguda, Hyderabad, Telangana 502319",
+    },
+
+
   ];
 
   const totalPartners = partners.length;
@@ -144,7 +161,7 @@ export default function OurBranches() {
   }, [screenSize, totalPartners]);
 
   return (
-    <div className="w-full p-4 sm:p-6 xl:p-12 flex flex-col lg:flex-row items-center bg-black text-white">
+    <div className="w-full p-4 md:p-6 xl:p-12 flex flex-col lg:flex-row items-center bg-gradient-to-br from-black via-black to-gray-900">
       {/* min-h-screen */}
       {/* Text Content */}
       <motion.div
