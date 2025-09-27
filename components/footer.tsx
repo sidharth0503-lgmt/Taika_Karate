@@ -51,7 +51,7 @@ export function Footer() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="text-muted text-sm leading-relaxed mb-4 md:mb-6"
+              className="text-muted text-sm md:text-[15px] leading-relaxed mb-4 md:mb-6"
             >
               Empowering students through traditional karate training, building
               confidence, character, and physical fitness in <span className="text-primary">Hyderabad</span>.
@@ -86,7 +86,7 @@ export function Footer() {
             viewport={{ once: false }}
             className="col-span-2 md:col-span-2 mb-8 lg:mb-0"
           >
-            <h4 className="font-heading font-semibold text-white text-lg mb-4">
+            <h4 className="font-heading font-semibold text-white tex-md tmd:text-lg mb-2 md:mb-4">
               Quick Links
             </h4>
             <motion.nav
@@ -123,7 +123,7 @@ export function Footer() {
             viewport={{ once: false }}
             className="col-span-2 md:col-span-2 lg:col-span-3"
           >
-            <h4 className="font-heading text-center md:text-start font-semibold text-white text-lg mb-4">
+            <h4 className="font-heading text-center md:text-start font-semibold text-white text-md mb-2 md:text-lg md:mb-4">
               Training Hours
             </h4>
             <motion.div
@@ -135,22 +135,22 @@ export function Footer() {
               <div className="flex items-center space-x-4">
                 <Clock className="w-5 h-5 text-primary flex-shrink-0" />
                 <div className="text-base">
-                  <p className="text-white font-medium">Mon - Fri</p>
-                  <p className="text-muted">6:00 AM - 9:00 PM</p>
+                  <p className="text-white text-md md:text-lg">Mon - Fri</p>
+                  <p className="text-muted text-sm">6:00 AM - 9:00 PM</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
                 <Clock className="w-5 h-5 text-primary flex-shrink-0" />
                 <div className="text-base">
-                  <p className="text-white font-medium">Saturday</p>
-                  <p className="text-muted">8:00 AM - 6:00 PM</p>
+                  <p className="text-white text-md md:text-lg">Saturday</p>
+                  <p className="text-muted text-sm">8:00 AM - 6:00 PM</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
                 <Clock className="w-5 h-5 text-primary flex-shrink-0" />
                 <div className="text-base">
-                  <p className="text-white font-medium">Sunday</p>
-                  <p className="text-muted">Closed</p>
+                  <p className="text-white text-md md:text-lg">Sunday</p>
+                  <p className="text-muted text-sm">Closed</p>
                 </div>
               </div>
             </motion.div>
@@ -164,7 +164,7 @@ export function Footer() {
             viewport={{ once: false }}
             className="col-span-4 md:col-span-2 lg:col-span-3 mb-8 lg:mb-0"
           >
-            <h4 className="font-heading font-semibold text-white text-lg mb-4">
+            <h4 className="font-heading font-semibold text-white text-md md:text-lg mb-2 md:mb-4">
               Contact Info
             </h4>
             <motion.div
@@ -175,7 +175,7 @@ export function Footer() {
             >
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                <p className="text-muted text-base">
+                <p className="text-muted text-sm md:text-md">
                   Plot No. 92, near Venkateswara Swamy Temple, Gayatri Nagar,
                   Vivekananda Nagar, Kukatpally, Hyderabad, Telangana 500072
                 </p>
