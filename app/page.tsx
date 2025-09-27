@@ -322,7 +322,7 @@ export default function Home() {
             everyday life.
           </motion.p>
 
-    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-8 mt-10 w-full max-w-4xl">
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-8 mt-10 w-full max-w-4xl">
       {stats.map((stat, i) => (
         <StatCard key={i} value={stat.value} label={stat.label} delay={i * 0.2} />
       ))}
@@ -330,7 +330,7 @@ export default function Home() {
         </div>
 
         {/* Services Section */}
-        <div className="mt-12 mx-auto w-full">
+        <div className="mt-4 md:mt-8 mx-auto w-full">
           <div className="hidden xl:block">
             {SERVICES.map((item, index) => (
               <div

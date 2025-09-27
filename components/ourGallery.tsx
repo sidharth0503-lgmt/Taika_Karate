@@ -13,10 +13,7 @@ const GALLERY_IMAGES = [
   { src: "/images/karate26.jpg", cols: 1, rows: 2 },
   { src: "/images/karate27.jpg", cols: 1, rows: 2 },
   { src: "/images/karate25.png", cols: 2, rows: 2 },
-  { src: "/images/karate7.jpg", cols: 1, rows: 1 },
-  { src: "/images/karate29.jpg", cols: 1, rows: 1 },
-  { src: "/images/gimage11.jpg", cols: 1, rows: 1 },
-  { src: "/images/karate30.jpg", cols: 1, rows: 1 },
+  { src: "/images/karate7.jpg", cols: 2, rows: 2 },
 ];
 
 const fadeInUpVariants = {
@@ -56,7 +53,7 @@ export default function KarateGallery() {
 
       {/* Masonry Grid */}
       <div className="w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-2 md:gap-2 auto-rows-[150px] sm:auto-rows-[150px] md:auto-rows-[180px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-2 md:gap-2 auto-rows-[100px] sm:auto-rows-[150px] md:auto-rows-[180px]">
           {GALLERY_IMAGES.map(({ src, cols, rows }, idx) => (
             <GalleryImage key={idx} src={src} cols={cols} rows={rows} />
           ))}

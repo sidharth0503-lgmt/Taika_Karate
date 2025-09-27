@@ -30,7 +30,11 @@ const ACHIEVEMENTS = [
   { id: 22, src: "/images/gimage31.jpg", title: "Martial Arts Winter Camp" },
   { id: 23, src: "/images/gimage17.jpg", title: "International Open 2023" },
   { id: 24, src: "/images/gimage21.jpg", title: "Dojo Unity Festival" },
-  { id: 25, src: "/images/gimage26.jpg", title: "Self Defense Awareness Drive" },
+  {
+    id: 25,
+    src: "/images/gimage26.jpg",
+    title: "Self Defense Awareness Drive",
+  },
   { id: 26, src: "/images/gimage28.jpg", title: "Warriors Night 2025" },
   { id: 27, src: "/images/gimage13.jpg", title: "National Training Camp" },
   { id: 28, src: "/images/gimage33.jpg", title: "Karate Youth Summit" },
@@ -65,61 +69,147 @@ export default function AchievementsSection() {
           variants={fadeInUpVariants}
           className="text-md md:text-lg text-muted-dark max-w-2xl mx-auto mb-4"
         >
-          Celebrating the milestones and exceptional accomplishments of our Founder,{" "}
-          <span className="font-semibold text-primary">Grandmaster Shihan Dr. Ashok Chakravarti</span>, 
-          and the Kaarti Academy team.
+          Celebrating the milestones and exceptional accomplishments of our
+          Founder,{" "}
+          <span className="font-semibold text-primary">
+            Grandmaster Shihan Dr. Ashok Chakravarti
+          </span>
+          , and the Kaarti Academy team.
         </motion.p>
       </motion.div>
 
+      <motion.div
+        variants={fadeInUpVariants}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto mb-6"
+      >
+        <div className="bg-gray-900 rounded-2xl overflow-hidden border-2 border-primary">
+          <img
+            src="/images/Ach5.JPG"
+            alt="Pioneer in Martial Arts"
+            className="w-full h-40 object-cover"
+          />
+          <div className="flex flex-col p-2 gap-1">
+            <h3 className="text-md md:text-lg font-semibold text-primary">
+              Pioneer in Martial Arts
+            </h3>
+            <p className="text-gray-400 text-xs md:text-sm">
+              Credited with revolutionizing Karate and elevating its standards
+              for future generations.
+            </p>
+          </div>
+        </div>
 
-       <motion.div
-  variants={fadeInUpVariants}
-  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto text-left mb-6"
->
-  <div className="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition-transform duration-300 hover:scale-105">
-    <span className="font-semibold text-white">Pioneer in Martial Arts:</span>
-    <span className="text-gray-400"> Credited with revolutionizing Karate and elevating its standards for future generations.</span>
-  </div>
+        <div className="bg-gray-900 rounded-2xl overflow-hidden border-2 border-primary">
+          <img
+            src="/images/IMG_0468.jpg"
+            alt="Blackbelt 5th Dan"
+            className="w-full h-40 object-cover"
+          />
+          <div className="flex flex-col p-2 gap-1">
+            <h3 className="text-md md:text-lg font-semibold text-primary">
+              Blackbelt 5th Dan
+            </h3>
+            <p className="text-gray-400 text-xs md:text-sm">
+              Demonstrating exceptional expertise in Karate.
+            </p>
+          </div>
+        </div>
+        <div className="bg-gray-900 rounded-2xl overflow-hidden border-2 border-primary">
+          <img
+            src="/images/Karate17.jpg"
+            alt="2nd World Martial Arts Championship Gold Medalist"
+            className="w-full h-40 object-cover"
+          />
+          <div className="flex flex-col p-2 gap-1">
+            <h3 className="text-md md:text-lg font-semibold text-primary">
+              2nd World Martial Arts Gold Medalist
+            </h3>
+            <p className="text-gray-400 text-xs md:text-sm">
+              Achieved in 2015, showcasing his competitive excellence.
+            </p>
+          </div>
+        </div>
 
-  <div className="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition-transform duration-300 hover:scale-105">
-    <span className="font-semibold text-white">Blackbelt 5th Dan:</span>
-    <span className="text-gray-400"> Demonstrating exceptional expertise in Karate.</span>
-  </div>
+        <div className="bg-gray-900 rounded-2xl overflow-hidden border-2 border-primary">
+          <img
+            src="/images/Ach4.JPG"
+            alt="National Referee in Karate"
+            className="w-full h-40 object-cover"
+          />
+          <div className="flex flex-col p-2 gap-1">
+            <h3 className="text-md md:text-lg font-semibold text-primary">
+              National Referee in Karate
+            </h3>
+            <p className="text-gray-400 text-xs md:text-sm">
+              Reflecting his high standing in the sport.
+            </p>
+          </div>
+        </div>
+        <div className="bg-gray-900 rounded-2xl overflow-hidden border-2 border-primary">
+          <img
+            src="/images/gimage16.jpg"
+            alt="Vice President of USKI"
+            className="w-full h-40 object-cover"
+          />
+          <div className="flex flex-col p-2 gap-1">
+            <h3 className="text-md md:text-lg font-semibold text-primary">
+              Vice President of USKI
+            </h3>
+            <p className="text-gray-400 text-xs md:text-sm">
+              Serving in Telangana, contributing to the growth of Karate.
+            </p>
+          </div>
+        </div>
 
-  <div className="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition-transform duration-300 hover:scale-105">
-    <span className="font-semibold text-white">2nd World Martial Arts Championship Gold Medalist:</span>
-    <span className="text-gray-400"> Achieved in 2015, showcasing his competitive excellence.</span>
-  </div>
+        <div className="bg-gray-900 rounded-2xl overflow-hidden border-2 border-primary">
+          <img
+            src="/images/Ach3.JPG"
+            alt="WKF Certified Coach"
+            className="w-full h-40 object-cover"
+          />
+          <div className="flex flex-col p-2 gap-1">
+            <h3 className="text-md md:text-lg font-semibold text-primary">
+              WKF Certified Coach
+            </h3>
+            <p className="text-gray-400 text-xs md:text-sm">
+              Official recognition of his dedication and expertise.
+            </p>
+          </div>
+        </div>
 
-  <div className="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition-transform duration-300 hover:scale-105">
-    <span className="font-semibold text-white">National Referee in Karate:</span>
-    <span className="text-gray-400"> Reflecting his high standing in the sport.</span>
-  </div>
+        <div className="bg-gray-900 rounded-2xl overflow-hidden border-2 border-primary">
+          <img
+            src="/images/Ach1.JPG"
+            alt="Honorary Degree of Doctor of Martial Arts"
+            className="w-full h-40 object-cover"
+          />
+          <div className="flex flex-col p-2 gap-1">
+            <h3 className="text-md md:text-lg font-semibold text-primary">
+              Honorary Degree of Doctor of Martial Arts
+            </h3>
+            <p className="text-gray-400 text-xs md:text-sm">
+              Received for outstanding contributions to the field.
+            </p>
+          </div>
+        </div>
 
-  <div className="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition-transform duration-300 hover:scale-105">
-    <span className="font-semibold text-white">Vice President of USKI:</span>
-    <span className="text-gray-400"> Serving in Telangana, contributing to the growth of Karate.</span>
-  </div>
+        <div className="bg-gray-900 rounded-2xl overflow-hidden border-2 border-primary">
+          <img
+            src="/images/Ach2.JPG"
+            alt="National Martial Arts Excellence Award"
+            className="w-full h-40 object-cover"
+          />
+          <div className="flex flex-col p-2 gap-1">
+            <h3 className="text-md md:text-lg font-semibold text-primary">
+              National Martial Arts Excellence Award
+            </h3>
+            <p className="text-gray-400 text-xs md:text-sm">
+              Honored in Telangana in 2023 for his exceptional contributions.
+            </p>
+          </div>
+        </div>
+      </motion.div>
 
-  <div className="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition-transform duration-300 hover:scale-105">
-    <span className="font-semibold text-white">WKF Certified Coach:</span>
-    <span className="text-gray-400"> Official recognition of his dedication and expertise.</span>
-  </div>
-
-  <div className="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition-transform duration-300 hover:scale-105">
-    <span className="font-semibold text-white">Honorary Degree of Doctor of Martial Arts:</span>
-    <span className="text-gray-400"> Received for outstanding contributions to the field.</span>
-  </div>
-
-  <div className="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition-transform duration-300 hover:scale-105">
-    <span className="font-semibold text-white">National Martial Arts Excellence Award:</span>
-    <span className="text-gray-400"> Honored in Telangana in 2023 for his exceptional contributions.</span>
-  </div>
-</motion.div>
-
-      
-
-      {/* Achievements Grid */}
       <motion.div
         variants={containerVariants}
         initial="initial"
@@ -136,7 +226,7 @@ export default function AchievementsSection() {
 }
 
 // Gallery card with loader
-function GalleryCard({ src, title }:any) {
+function GalleryCard({ src, title }: any) {
   const [loaded, setLoaded] = useState(false);
 
   return (
@@ -152,7 +242,9 @@ function GalleryCard({ src, title }:any) {
         alt={title}
         fill
         onLoad={() => setLoaded(true)}
-        className={`object-cover transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
+        className={`object-cover transition-opacity duration-500 ${
+          loaded ? "opacity-100" : "opacity-0"
+        }`}
       />
     </div>
   );
