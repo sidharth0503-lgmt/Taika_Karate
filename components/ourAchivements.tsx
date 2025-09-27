@@ -80,7 +80,7 @@ export default function AchievementsSection() {
 
       <motion.div
         variants={fadeInUpVariants}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mx-auto mb-6"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 mx-auto mb-6"
       >
         <div className="bg-gray-900 rounded-2xl overflow-hidden border-2 border-primary">
           <img
