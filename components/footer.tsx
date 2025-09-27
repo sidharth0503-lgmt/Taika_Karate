@@ -13,9 +13,11 @@ import {
   Youtube,
 } from "lucide-react";
 import { fadeInUpVariants } from "@/lib/motion";
+import { useState } from "react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const [mapLoaded, setMapLoaded] = useState(false);
 
   return (
     <footer className="bg-gradient-to-br from-black via-black to-gray-900">
@@ -54,17 +56,12 @@ export function Footer() {
               className="text-muted text-sm md:text-[15px] leading-relaxed mb-4 md:mb-6"
             >
               Empowering students through traditional karate training, building
-              confidence, character, and physical fitness in <span className="text-primary">Hyderabad</span>.
+              confidence, character, and physical fitness in{" "}
+              <span className="text-primary">Hyderabad</span>.
             </motion.p>
             <div className="flex space-x-4">
               <a
-                href="#"
-                className="text-muted hover:text-primary transition-colors"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
+                href="https://www.instagram.com/taika_martial_arts_academy?igsh=MTU4aTExNXRlbmh3bg=="
                 className="text-muted hover:text-primary transition-colors"
               >
                 <Instagram className="w-5 h-5" />
@@ -126,34 +123,32 @@ export function Footer() {
             <h4 className="font-heading text-center md:text-start font-semibold text-white text-md mb-2 md:text-lg md:mb-4">
               Training Hours
             </h4>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="space-y-4 mb-8"
-            >
-              <div className="flex items-center space-x-4">
-                <Clock className="w-5 h-5 text-primary flex-shrink-0" />
-                <div className="text-base">
-                  <p className="text-white text-md md:text-lg">Mon - Fri</p>
-                  <p className="text-muted text-sm">6:00 AM - 9:00 PM</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-4">
-                <Clock className="w-5 h-5 text-primary flex-shrink-0" />
-                <div className="text-base">
-                  <p className="text-white text-md md:text-lg">Saturday</p>
-                  <p className="text-muted text-sm">8:00 AM - 6:00 PM</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-4">
-                <Clock className="w-5 h-5 text-primary flex-shrink-0" />
-                <div className="text-base">
-                  <p className="text-white text-md md:text-lg">Sunday</p>
-                  <p className="text-muted text-sm">Closed</p>
-                </div>
-              </div>
-            </motion.div>
+          <motion.div
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, ease: "easeOut" }}
+  className="space-y-4 mb-8"
+>
+  {/* Monday to Saturday */}
+  <div className="flex items-center space-x-4">
+    <Clock className="w-5 h-5 text-primary flex-shrink-0" />
+    <div className="text-base">
+      <p className="text-white text-md md:text-lg">Mon – Sat</p>
+      <p className="text-muted text-sm mb-1">Morning: 6:00 AM – 12:00 PM</p>
+      <p className="text-muted text-sm">Evening: 4:00 PM – 8:00 PM</p>
+    </div>
+  </div>
+
+  {/* Sunday */}
+  <div className="flex items-center space-x-4">
+    <Clock className="w-5 h-5 text-primary flex-shrink-0" />
+    <div className="text-base">
+      <p className="text-white text-md md:text-lg">Sun</p>
+      <p className="text-muted text-sm">Closed</p>
+    </div>
+  </div>
+</motion.div>
+
           </motion.div>
 
           {/* Training Hours */}
@@ -173,6 +168,7 @@ export function Footer() {
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="space-y-3"
             >
+              {/* Address */}
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                 <p className="text-muted text-sm md:text-md">
@@ -180,16 +176,23 @@ export function Footer() {
                   Vivekananda Nagar, Kukatpally, Hyderabad, Telangana 500072
                 </p>
               </div>
-              <div className="rounded-lg overflow-hidden border border-gray-700 shadow-md">
+
+              <div className="relative rounded-lg overflow-hidden border border-gray-700 shadow-md w-full h-[120px]">
+                {!mapLoaded && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-gray-800 animate-pulse">
+                    <div className="w-8 h-8 border border-primary border-t-transparent rounded-full animate-spin"></div>
+                  </div>
+                )}
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.259455333538!2d78.4067001!3d17.495123799999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9160a4a7f18d%3A0xc180e0b2890f068e!2sINTERNATIONAL%20TAIKA%20MARTIAL%20ARTS%20ACADEMY%20(Corporate%20Branch)!5e0!3m2!1sen!2sin!4v1758948730662!5m2!1sen!2sin"
                   width="100%"
-                  height="100"
+                  height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Small Map"
+                  onLoad={() => setMapLoaded(true)}
                 ></iframe>
               </div>
             </motion.div>

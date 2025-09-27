@@ -81,7 +81,7 @@ export function Navbar() {
             </Link>
 
             {/* Desktop Nav */}
-            <div className="hidden lg:flex items-center md:space-x-6">
+            <div className="hidden xl:flex items-center md:space-x-6">
               {navigation.map((item, i) => (
                 <motion.div
                   key={item.name}
@@ -117,7 +117,7 @@ export function Navbar() {
             <div className="flex gap-4">
               <motion.a
                 href="tel:+919100844333"
-                className="hidden lg:flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-semibold text-primary border-2 border-primary bg-black text-xs sm:text-sm md:text-base"
+                className="hidden xl:flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-semibold text-primary border-2 border-primary bg-black text-xs sm:text-sm md:text-base"
                 animate={{
                   scale: [1, 1.05, 1],
                   boxShadow: [
@@ -141,7 +141,7 @@ export function Navbar() {
                 href="https://wa.me/919100844333?text=Hello%2C%20I%20went%20through%20your%20website.%20I%20am%20interested%20to%20join%20and%20I%20have%20a%20few%20questions%20to%20discuss%3F"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden lg:flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-semibold text-green-500 border-2 border-green-500 bg-black text-xs sm:text-sm md:text-base"
+                className="hidden xl:flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-semibold text-green-500 border-2 border-green-500 bg-black text-xs sm:text-sm md:text-base"
                 animate={{
                   scale: [1, 1.05, 1],
                   boxShadow: [
@@ -166,7 +166,7 @@ export function Navbar() {
             <button
               // variant="outline"
               // size="icon"
-              className="lg:hidden text-white"
+              className="xl:hidden text-white"
               onClick={() => setIsOpen(!isOpen)}
               // animate={false}
             >
