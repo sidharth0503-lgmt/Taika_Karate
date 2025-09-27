@@ -120,7 +120,7 @@ export function Footer() {
             viewport={{ once: false }}
             className="col-span-2 md:col-span-2 lg:col-span-3"
           >
-            <h4 className="font-heading text-center md:text-start font-semibold text-white text-md mb-2 md:text-lg md:mb-4">
+            <h4 className="font-heading text-start font-semibold text-white text-md mb-2 md:text-lg md:mb-4">
               Training Hours
             </h4>
           <motion.div
@@ -129,23 +129,25 @@ export function Footer() {
   transition={{ duration: 0.6, ease: "easeOut" }}
   className="space-y-4 mb-8"
 >
-  {/* Monday to Saturday */}
   <div className="flex items-center space-x-4">
-    <Clock className="w-5 h-5 text-primary flex-shrink-0" />
-    <div className="text-base">
-      <p className="text-white text-md md:text-lg">Mon – Sat</p>
-      <p className="text-muted text-sm mb-1">Morning: 6:00 AM – 12:00 PM</p>
-      <p className="text-muted text-sm">Evening: 4:00 PM – 8:00 PM</p>
-    </div>
-  </div>
+    
+  <div className="text-base space-y-1">
+  <p className="text-white text-md md:text-lg font-semibold">Mon – Sat</p>
+  <div className="flex gap-1 items-center">
 
-  {/* Sunday */}
-  <div className="flex items-center space-x-4">
-    <Clock className="w-5 h-5 text-primary flex-shrink-0" />
-    <div className="text-base">
-      <p className="text-white text-md md:text-lg">Sun</p>
-      <p className="text-muted text-sm">Closed</p>
-    </div>
+  <Clock className="w-3.5 h-3.5 text-primary flex-shrink-0 items-center" />
+  <p className="text-muted text-sm mb-1">Morning:</p>
+  </div>
+  <p className="gradient-text">6:00 AM – 12:00 PM</p>
+
+  <div className="flex gap-1 items-center">
+
+  <Clock className="w-3.5 h-3.5 text-primary flex-shrink-0 items-center" />
+  <p className="text-muted text-sm mb-1">Evening:</p>
+  </div>
+  <p className="gradient-text">4:00 PM – 8:00 PM</p>
+</div>
+
   </div>
 </motion.div>
 
