@@ -276,8 +276,12 @@ export const beltRanks = [
   { name: 'Brown Belt-1', color: '#8B4513', level: 7 },
   { name: 'Brown Belt-2', color: '#8B4513', level: 8 },
   { name: 'Brown Belt-3', color: '#8B4513', level: 9 },
-  { name: 'Black Belt', color: '#353935', level: 10 },
+  { name: 'Black Belt-1', color: '#353935', level: 10 },
+  { name: 'Black Belt-2', color: '#353935', level: 11 },
+  { name: 'Black Belt-3', color: '#353935', level: 12 },
+  { name: 'Black Belt-4', color: '#353935', level: 13 },
 ];
+
 
 export const pricingPlans = [
   {

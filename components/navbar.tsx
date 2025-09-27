@@ -4,16 +4,16 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, MessageCircle, } from "lucide-react";
+import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button-variants";
 import { cn } from "@/lib/utils";
 
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Classes", href: "/classes" },
-    { name: "Branches", href: "/branches" },
-     { name: "BlackBelt", href: "/blackbelt" },
-      { name: "GrandMaster", href: "/grandmaster" },
+  { name: "Branches", href: "/branches" },
+  { name: "BlackBelt", href: "/blackbelt" },
+  { name: "GrandMaster", href: "/grandmaster" },
   { name: "BlackBelt Gallery", href: "/blackbelt-gallery" },
 ];
 
@@ -27,8 +27,7 @@ export function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
-      const totalHeight =
-        document.body.scrollHeight - window.innerHeight;
+      const totalHeight = document.body.scrollHeight - window.innerHeight;
       const progressValue = window.scrollY / totalHeight;
       setProgress(progressValue);
     };
@@ -102,7 +101,11 @@ export function Navbar() {
                       <motion.div
                         className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary"
                         layoutId="navbar-indicator"
-                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 300,
+                          damping: 30,
+                        }}
                       />
                     )}
                   </Link>
@@ -112,52 +115,52 @@ export function Navbar() {
 
             {/* Call Now CTA (Desktop) */}
             <div className="flex gap-4">
-            <motion.a
-              href="tel:1234567890"
-              className="hidden lg:flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-semibold text-primary border-2 border-primary bg-black text-xs sm:text-sm md:text-base"
-              animate={{
-                scale: [1, 1.05, 1],
-                boxShadow: [
-                  "0 0 5px rgba(248,113,113,0.5)",
-                  "0 0 15px rgba(248,113,113,0.7)",
-                  "0 0 5px rgba(248,113,113,0.5)"
-                ],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-                ease: "easeInOut",
-              }}
-            >
-              <Phone className="w-4 h-4" />
-              Call Now
-            </motion.a>
+              <motion.a
+                href="tel:+919100844333"
+                className="hidden lg:flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-semibold text-primary border-2 border-primary bg-black text-xs sm:text-sm md:text-base"
+                animate={{
+                  scale: [1, 1.05, 1],
+                  boxShadow: [
+                    "0 0 5px rgba(248,113,113,0.5)",
+                    "0 0 15px rgba(248,113,113,0.7)",
+                    "0 0 5px rgba(248,113,113,0.5)",
+                  ],
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  ease: "easeInOut",
+                }}
+              >
+                <Phone className="w-4 h-4" />
+                Call Now
+              </motion.a>
 
-            <motion.a
-        href="https://wa.me/1234567890"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hidden lg:flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-semibold text-green-500 border-2 border-green-500 bg-black text-xs sm:text-sm md:text-base"
-        animate={{
-                scale: [1, 1.05, 1],
-                boxShadow: [
-                  "0 0 5px rgba(248,113,113,0.5)",
-                  "0 0 15px rgba(248,113,113,0.7)",
-                  "0 0 5px rgba(248,113,113,0.5)"
-                ],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-                ease: "easeInOut",
-              }}
-      >
-        <MessageCircle className="w-4 h-4 text-green-500" />
-        <span className="text-green-500">WhatsApp</span>
-      </motion.a>
-      </div>
+              <motion.a
+                href="https://wa.me/919100844333?text=Hello%2C%20I%20went%20through%20your%20website.%20I%20am%20interested%20to%20join%20and%20I%20have%20a%20few%20questions%20to%20discuss%3F"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden lg:flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-semibold text-green-500 border-2 border-green-500 bg-black text-xs sm:text-sm md:text-base"
+                animate={{
+                  scale: [1, 1.05, 1],
+                  boxShadow: [
+                    "0 0 5px rgba(248,113,113,0.5)",
+                    "0 0 15px rgba(248,113,113,0.7)",
+                    "0 0 5px rgba(248,113,113,0.5)",
+                  ],
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  ease: "easeInOut",
+                }}
+              >
+                <MessageCircle className="w-4 h-4 text-green-500" />
+                <span className="text-green-500">WhatsApp</span>
+              </motion.a>
+            </div>
 
             {/* Mobile Menu Button */}
             <button
@@ -167,7 +170,11 @@ export function Navbar() {
               onClick={() => setIsOpen(!isOpen)}
               // animate={false}
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -176,8 +183,8 @@ export function Navbar() {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-            className="min-h-screen justify-center fixed xl:hidden left-0 right-0 bg-dark/95 backdrop-blur-md  border-white/10"
-   initial={{ opacity: 0, y: -20 }}
+              className="min-h-screen justify-center fixed xl:hidden left-0 right-0 bg-dark/95 backdrop-blur-md  border-white/10"
+              initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
@@ -207,31 +214,28 @@ export function Navbar() {
 
                 {/* Call Now in mobile */}
                 <div className="flex flex-col">
+                  <motion.a
+                    href="tel:+919100844333"
+                    className="flex items-center justify-center gap-2 mt-4 px-4 py-2 rounded-full font-semibold text-primary border-2 border-primary bg-black"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Phone className="w-4 h-4" />
+                    Call Now
+                  </motion.a>
 
-                <motion.a
-                  href="tel:1234567890"
-                  className="flex items-center justify-center gap-2 mt-4 px-4 py-2 rounded-full font-semibold text-primary border-2 border-primary bg-black"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Phone className="w-4 h-4" />
-                  Call Now
-                </motion.a>
-
-                 <motion.a
-                  href="https://wa.me/1234567890"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 mt-4 px-4 py-2 rounded-full font-semibold text-green-500 border-2 border-green-500 bg-black"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <MessageCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-green-500">WhatsApp</span>
-                </motion.a>          
-
+                  <motion.a
+                    href="https://wa.me/919100844333?text=Hello%2C%20I%20went%20through%20your%20website.%20I%20am%20interested%20to%20join%20and%20I%20have%20a%20few%20questions%20to%20discuss%3F"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 mt-4 px-4 py-2 rounded-full font-semibold text-green-500 border-2 border-green-500 bg-black"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <MessageCircle className="w-4 h-4 text-green-500" />
+                    <span className="text-green-500">WhatsApp</span>
+                  </motion.a>
                 </div>
-
               </div>
             </motion.div>
           )}

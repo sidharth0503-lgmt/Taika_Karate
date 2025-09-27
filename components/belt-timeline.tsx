@@ -130,7 +130,10 @@ export function BeltTimeline() {
                     {index === 6 && "Advanced"}
                      {index === 7 && "Elite"}
                     {index === 8 && "Master Level"}
-                    {index === 9 && "Grandmaster"}
+                    {index === 9 && "Master Level-1"}
+                    {index === 10 && "Master Level-2"}
+                    {index === 11 && "Master Level-3"}
+                    {index === 12 && "Grand Master"}
                   </p>
                 </div>
               </motion.div>
@@ -140,7 +143,7 @@ export function BeltTimeline() {
 
         {/* Progress Indicator */}
         <motion.div
-          className="mt-2 text-center block xl:hidden"
+          className="mt-2 text-center block"
           variants={fadeInUpVariants}
         >
           <p className="text-muted text-sm mb-2">

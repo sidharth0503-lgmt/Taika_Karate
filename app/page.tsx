@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import { Hero } from "@/components/hero";
 import { BeltTimeline } from "@/components/belt-timeline";
 
@@ -173,48 +173,6 @@ export default function Home() {
     },
   ];
 
-  const aboutCards = [
-    {
-      id: 1,
-      icon: <Heart className="w-8 h-8 text-red-500" />,
-      title: "Our Passion",
-      subtitle: "Crafting Digital Excellence",
-      color: "bg-gradient-to-br from-red-500 to-pink-600",
-      textColor: "text-white",
-      description:
-        "At Kaarti, we are passionate about transforming ideas into stunning digital experiences. Our dedication to excellence drives us to create solutions that not only meet but exceed expectations, bringing your vision to life with creativity and precision.",
-    },
-    {
-      id: 2,
-      icon: <Users className="w-8 h-8 text-blue-500" />,
-      title: "Our Team",
-      subtitle: "Talented Professionals",
-      color: "bg-gradient-to-br from-blue-500 to-cyan-600",
-      textColor: "text-white",
-      description:
-        "Our diverse team of designers, developers, and strategists brings together years of experience and fresh perspectives. We collaborate seamlessly to deliver innovative solutions that push boundaries and set new standards in the digital landscape.",
-    },
-    {
-      id: 3,
-      icon: <Trophy className="w-8 h-8 text-yellow-500" />,
-      title: "Our Achievement",
-      subtitle: "Proven Track Record",
-      color: "bg-gradient-to-br from-yellow-500 to-orange-600",
-      textColor: "text-white",
-      description:
-        "With over 500+ successful projects and 200+ satisfied clients worldwide, Kaarti has established itself as a trusted partner in digital transformation. Our commitment to quality and innovation has earned us recognition and long-lasting partnerships.",
-    },
-    {
-      id: 4,
-      icon: <Sparkles className="w-8 h-8 text-purple-500" />,
-      title: "Our Vision",
-      subtitle: "Future-Forward Thinking",
-      color: "bg-gradient-to-br from-purple-500 to-indigo-600",
-      textColor: "text-white",
-      description:
-        "We envision a future where technology seamlessly integrates with human creativity. Our goal is to be at the forefront of digital innovation, continuously evolving our skills and approaches to help businesses thrive in an ever-changing digital world.",
-    },
-  ];
 
   const SERVICES = [
     {
@@ -242,6 +200,57 @@ export default function Home() {
       // link: "#martialarts",
     },
   ];
+
+  const stats = [
+  { value: 10000, label: "Students Trained" },
+  { value: 25, label: "Years of Experience" },
+  { value: 2000, label: "Black Belts Awarded" },
+];
+
+  function StatCard({
+  value,
+  label,
+  delay,
+}: {
+  value: number;
+  label: string;
+  delay: number;
+}) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (isInView) {
+      let start = 0;
+      const duration = 2000; 
+      const stepTime = 20;
+      const increment = value / (duration / stepTime);
+
+      const timer = setInterval(() => {
+        start += increment;
+        if (start >= value) {
+          start = value;
+          clearInterval(timer);
+        }
+        setCount(Math.floor(start));
+      }, stepTime);
+    }
+  }, [isInView, value]);
+
+  return (
+    <motion.div
+      ref={ref}
+      variants={fadeInUpVariants}
+      className="flex flex-col items-center bg-gradient-to-br from-gray-800/60 to-gray-900/80 p-6 rounded-xl shadow-lg border border-gray-700 hover:scale-105 transition-transform duration-300"
+    >
+      <h3 className="text-3xl md:text-4xl font-bold gradient-text">
+        {count.toLocaleString()}+
+      </h3>
+      <p className="text-gray-300 text-sm md:text-base">{label}</p>
+    </motion.div>
+  );
+}
 
   return (
     <>
@@ -313,20 +322,11 @@ export default function Home() {
             everyday life.
           </motion.p>
 
-          <div className="flex gap-8 justify-center">
-            {[
-              { Icon: GiBoxingGlove, label: "Boxing" },
-              { Icon: MdSportsMma, label: "Karate" },
-              { Icon: MdSportsKabaddi, label: "Martial Arts" },
-            ].map(({ Icon, label }, idx) => (
-              <div key={idx} className="flex flex-col items-center gap-2">
-                <div className="p-4 bg-red-600 rounded-full shadow-lg hover:scale-110 transition-transform duration-300">
-                  <Icon className="h-6 w-6 md:w-10 md:h-10 text-white" />
-                </div>
-                <span className="text-sm text-gray-300">{label}</span>
-              </div>
-            ))}
-          </div>
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-8 mt-10 w-full max-w-4xl">
+      {stats.map((stat, i) => (
+        <StatCard key={i} value={stat.value} label={stat.label} delay={i * 0.2} />
+      ))}
+    </div>
         </div>
 
         {/* Services Section */}

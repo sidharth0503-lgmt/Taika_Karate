@@ -7,13 +7,13 @@ import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { Section } from "./ui/section";
 
 const GALLERY_IMAGES = [
-  { src: "/images/karate1.jpg", cols: 2, rows: 2 },
+  { src: "/images/gimage4.jpg", cols: 2, rows: 2 },
   { src: "/images/karate2.jpg", cols: 1, rows: 2 },
   { src: "/images/karate24.jpeg", cols: 1, rows: 2 },
   { src: "/images/karate26.jpg", cols: 1, rows: 2 },
   { src: "/images/karate27.jpg", cols: 1, rows: 2 },
   { src: "/images/karate25.png", cols: 2, rows: 2 },
-  { src: "/images/karate28.jpg", cols: 1, rows: 1 },
+  { src: "/images/karate7.jpg", cols: 1, rows: 1 },
   { src: "/images/karate29.jpg", cols: 1, rows: 1 },
   { src: "/images/gimage11.jpg", cols: 1, rows: 1 },
   { src: "/images/karate30.jpg", cols: 1, rows: 1 },
