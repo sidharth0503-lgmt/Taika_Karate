@@ -202,7 +202,7 @@ export default function Home() {
   ];
 
   const stats = [
-  { value: 10000, label: "Students Trained" },
+  { value: 20000, label: "Students Trained" },
   { value: 25, label: "Years of Experience" },
   { value: 2000, label: "Black Belts Awarded" },
 ];

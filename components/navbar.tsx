@@ -13,7 +13,7 @@ const navigation = [
   { name: "Classes", href: "/classes" },
   { name: "Branches", href: "/branches" },
   { name: "BlackBelt", href: "/blackbelt" },
-  { name: "GrandMaster", href: "/grandmaster" },
+  { name: "Grand Master", href: "/grandmaster" },
   { name: "BlackBelt Gallery", href: "/blackbelt-gallery" },
 ];
 
