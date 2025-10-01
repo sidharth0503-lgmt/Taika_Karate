@@ -84,7 +84,7 @@ export default function AchievementsSection() {
       >
         <div className="bg-gray-900 rounded-2xl overflow-hidden border-2 border-primary">
           <img
-            src="/images/poineer.jpg"
+            src="/images/2ndWorld.jpg"
             alt="Pioneer in Martial Arts"
             className="w-full h-40 object-cover"
           />
