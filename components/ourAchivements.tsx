@@ -37,7 +37,7 @@ const ACHIEVEMENTS = [
   },
   { id: 26, src: "/images/gimage28.jpg", title: "Warriors Night 2025" },
   { id: 27, src: "/images/gimage13.jpg", title: "National Training Camp" },
-  { id: 28, src: "/images/gimage33.jpg", title: "Karate Youth Summit" },
+  // { id: 28, src: "/images/gimage33.jpg", title: "Karate Youth Summit" },
 ];
 
 const fadeInUpVariants = {
@@ -84,7 +84,7 @@ export default function AchievementsSection() {
       >
         <div className="bg-gray-900 rounded-2xl overflow-hidden border-2 border-primary">
           <img
-            src="/images/Ach5.JPG"
+            src="/images/poineer.jpg"
             alt="Pioneer in Martial Arts"
             className="w-full h-40 object-cover"
           />
@@ -101,7 +101,7 @@ export default function AchievementsSection() {
 
         <div className="bg-gray-900 rounded-2xl overflow-hidden border-2 border-primary">
           <img
-            src="/images/IMG_0468.jpg"
+            src="/images/Dan.jpg"
             alt="Blackbelt 5th Dan"
             className="w-full h-40 object-cover"
           />
@@ -132,7 +132,7 @@ export default function AchievementsSection() {
 
         <div className="bg-gray-900 rounded-2xl overflow-hidden border-2 border-primary">
           <img
-            src="/images/Ach4.JPG"
+            src="/images/Nationalrefernce.jpg"
             alt="National Referee in Karate"
             className="w-full h-40 object-cover"
           />
@@ -163,7 +163,7 @@ export default function AchievementsSection() {
 
         <div className="bg-gray-900 rounded-2xl overflow-hidden border-2 border-primary">
           <img
-            src="/images/Ach3.JPG"
+            src="/images/WKF.jpg"
             alt="WKF Certified Coach"
             className="w-full h-40 object-cover"
           />
@@ -205,6 +205,22 @@ export default function AchievementsSection() {
             </h3>
             <p className="text-gray-400 text-xs md:text-sm">
               Honored in Telangana in 2023 for his exceptional contributions.
+            </p>
+          </div>
+        </div>
+
+         <div className="bg-gray-900 rounded-2xl overflow-hidden border-2 border-primary">
+          <img
+            src="/images/Ach5.JPG"
+            alt="Blackbelt 5th Dan"
+            className="w-full h-40 object-cover"
+          />
+          <div className="flex flex-col p-2 gap-1">
+            <h3 className="text-md md:text-lg font-semibold text-primary">
+              Kick boxing feration
+            </h3>
+            <p className="text-gray-400 text-xs md:text-sm">
+              Demonstrating exceptional expertise in Karate.
             </p>
           </div>
         </div>

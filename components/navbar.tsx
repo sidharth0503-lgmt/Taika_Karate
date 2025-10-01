@@ -12,9 +12,9 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "Classes", href: "/classes" },
   { name: "Branches", href: "/branches" },
-  { name: "BlackBelt", href: "/blackbelt" },
+  { name: "Blackbelt", href: "/blackbelt" },
   { name: "Grand Master", href: "/grandmaster" },
-  { name: "BlackBelt Gallery", href: "/blackbelt-gallery" },
+  { name: "Blackbelt Gallery", href: "/blackbelt-gallery" },
 ];
 
 export function Navbar() {
