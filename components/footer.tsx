@@ -81,7 +81,7 @@ export function Footer() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: false }}
-            className="col-span-2 md:col-span-2 mb-8 lg:mb-0"
+            className="col-span-2 md:col-span-2 mb-8 lg:mb-2"
           >
             <h4 className="font-heading font-semibold text-white tex-md tmd:text-lg mb-2 md:mb-4">
               Quick Links

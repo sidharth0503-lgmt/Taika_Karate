@@ -74,7 +74,7 @@ export default function AchievementsSection() {
           <span className="font-semibold text-primary">
             Grandmaster Shihan Dr. Ashok Chakravarti
           </span>
-          , and the Kaarti Academy team.
+          , and the Karate Academy team.
         </motion.p>
       </motion.div>
 

@@ -105,6 +105,14 @@ const branches: Branch[] = [
     mapUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.228449859039!2d78.2825682!3d17.544306799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbf3930ba6bc0b%3A0x7fff533de24fe6c7!2sTaika%20Martial%20Arts%20Academy!5e0!3m2!1sen!2sin!4v1758948634006!5m2!1sen!2sin",
   },
+   {
+    img: "./images/gimage5.jpg",
+    name: "International Taika Martial Arts Academy",
+    address:
+      "4th Floor, Vedicare Building, 37-18/5A, near Ding Dong Circle, Defence Colony, Sainikpuri, Secunderabad, Telangana 500094",
+    mapUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.3792113690747!2d78.5378971751673!3d17.489402283415295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9b56eb9032e1%3A0x4b8a4dfaa3ac235b!2sTaika%20Martial%20Arts%20Academy!5e0!3m2!1sen!2sin!4v1760026378048!5m2!1sen!2sin",
+  },
 ];
 
 export default function Branches() {
