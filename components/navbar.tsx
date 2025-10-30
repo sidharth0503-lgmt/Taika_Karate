@@ -81,7 +81,7 @@ export function Navbar() {
             </Link>
 
             {/* Desktop Nav */}
-            <div className="hidden xl:flex items-center md:space-x-6">
+            <div className="hidden lg:flex items-center md:space-x-6">
               {navigation.map((item, i) => (
                 <motion.div
                   key={item.name}
@@ -166,7 +166,7 @@ export function Navbar() {
             <button
               // variant="outline"
               // size="icon"
-              className="xl:hidden text-white"
+              className="lg:hidden text-white"
               onClick={() => setIsOpen(!isOpen)}
               // animate={false}
             >
@@ -183,7 +183,7 @@ export function Navbar() {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              className="min-h-screen justify-center fixed xl:hidden left-0 right-0 bg-dark/95 backdrop-blur-md  border-white/10"
+              className="min-h-screen justify-center fixed lg:hidden left-0 right-0 bg-dark/95 backdrop-blur-md  border-white/10"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
