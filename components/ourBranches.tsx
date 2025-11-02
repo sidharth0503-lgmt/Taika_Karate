@@ -227,7 +227,7 @@ export default function OurBranches() {
                   <div
                     className={`relative rounded-2xl p-3 sm:p-4 lg:p-5 flex flex-col items-center justify-center transition-all duration-700 shadow-2xl backdrop-blur-sm ${
                       isCenter
-                        ? "bg-gradient-to-br from-red-500/20 via-red-600/10 to-transparent border-2 border-red-500 shadow-red-500/25"
+                        ? "bg-gradient-to-br from-red-500/20 via-red-600/10 to-transparent border-2 border-red-500"
                         : "bg-gray-800/40 border border-gray-600/30 hover:border-gray-500/50"
                     }`}
                     style={{
